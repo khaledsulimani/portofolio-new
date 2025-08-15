@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khaled mahmoud sulaimani</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- إضافة مكتبة Anime.js من الـ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="ksx-logo.jpg" alt="KSX Dev Tech Logo" class="logo">
+                    <div class="brand-text">
+                        <h1 class="boxed-text">Khaled Mahmoud Sulaimani</h1>
+                        <span class="tagline">KSX DEV • TECH</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#credentials">Credentials</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#social">Social</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="boxed-text">About Me</h2>
+        <div class="about-content">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <div class="image-placeholder">
+                        <img src="ksx-logo.jpg" alt="KSX Dev Tech" class="profile-logo">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p><span class="boxed-text">Hello! I'm Khaled Mahmoud Suliamani, a passionate Computer Science student in my fourth year at Umm Al-Qura University, Al-Qunfudah Branch. I'm a dedicated full-stack robotic engineer with a deep love for artificial intelligence and cutting-edge technologies.</span></p>
+                    <p><span class="boxed-text">My passion for AI drives me to continuously expand my knowledge beyond university curriculum through self-directed learning and practical applications. I have extensive hands-on experience with hardware like PC building and hardware platforms including Arduino and ESP32, complemented by proficiency in SolidWorks for mechanical design and engineering.</span></p>
+                    <p><span class="boxed-text">I specialize in bridging the gap between software and hardware, creating innovative solutions that combine programming expertise with mechanical engineering and electrical systems. My diverse skill set spans multiple programming languages, robotics, and IoT development, allowing me to tackle complex interdisciplinary projects.</span></p>
+                    
+                    <div class="expertise-tags">
+                        <span class="tag">Full-Stack Robotics Engineer</span>
+                        <span class="tag">Database Engineer</span>
+                        <span class="tag">SolidWorks Design</span>
+                        <span class="tag">Hardware Engineering</span>
+                        <span class="tag">AI Developer</span>
+                        <span class="tag">IoT Developer</span>
+                        <span class="tag">Web Developer</span>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">6 months+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="boxed-text">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="project-status">Featured</div>
+                    </div>
+                    <h3>Face Recognition LED Trigger with HuskyLens and Arduino</h3>
+                    <p>This project uses the HuskyLens AI camera and an Arduino UNO to detect human faces. When a face is recognized, an LED connected to the Arduino is turned on.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Arduino</span>
+                        <span class="tech">AI</span>
+                        <span class="tech">Computer Vision</span>
+                        <span class="tech">IoT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/khaledsulimani/huskylens" target="_blank" class="btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Robot Arm Control Panel (Flutter + PHP) -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <h3>Robot Arm Control Panel (Flutter)</h3>
+                    <p>A complete Flutter mobile app for controlling and saving robot arm poses with 4 motor sliders (0-180°). Features include pose saving/loading via MySQL database, PHP backend integration, and intuitive UI for robot arm management.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Flutter</span>
+                        <span class="tech">Dart</span>
+                        <span class="tech">PHP</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">Robotics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/khaledsulimani/robot-arm-flutter" target="_blank" class="btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web-based Robot Arm Control -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                    </div>
+                    <h3>Web-based Robot Arm Control Panel</h3>
+                    <p>A comprehensive web interface for controlling 6-motor robot arms using HTML, CSS, JavaScript, and PHP. Features real-time slider controls, pose management, and database integration for saving/loading motor positions.</p>
+                    <div class="tech-stack">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">PHP</span>
+                        <span class="tech">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/khaledsulimani/control-servo-via-php" target="_blank" class="btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RC Car with L293D Motor Driver -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <h3>Smart RC Car with Obstacle Detection</h3>
+                    <p>An intelligent RC car using Arduino, L293D motor driver, and ultrasonic sensor for autonomous obstacle avoidance. Features predefined movement patterns and real-time obstacle detection with automatic navigation adjustments.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Arduino</span>
+                        <span class="tech">C++</span>
+                        <span class="tech">L293D</span>
+                        <span class="tech">Ultrasonic Sensor</span>
+                        <span class="tech">Robotics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/khaledsulimani/l293d" target="_blank" class="btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AI Voice Chat Assistant -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                    </div>
+                    <h3>AI Voice Chat Assistant (Arabic)</h3>
+                    <p>An intelligent Arabic voice assistant powered by Cohere AI and Python. Features real-time speech recognition, AI-powered responses, and text-to-speech capabilities for natural Arabic conversations.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Python</span>
+                        <span class="tech">Cohere AI</span>
+                        <span class="tech">Speech Recognition</span>
+                        <span class="tech">gTTS</span>
+                        <span class="tech">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/khaledsulimani/ai_voicechat" target="_blank" class="btn-primary">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="section">
+        <div class="container">
+            <h2 class="boxed-text">Credentials</h2>
+            <div class="credentials-grid">
+                <!-- Certifications Card -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <div class="credential-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Certifications</h3>
+                    </div>
+                    <div class="credential-content">
+                        <p>Explore my professional certifications and achievements in technology, programming, and specialized skills that demonstrate my commitment to continuous learning and excellence.</p>
+                        <div class="credential-features">
+                            <div class="feature-item">
+                                <i class="fas fa-medal"></i>
+                                <span>Industry-recognized certificates</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Technical expertise validation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star"></i>
+                                <span>Continuous skill development</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="credential-action">
+                        <a href="https://drive.google.com/drive/folders/1-1ewuCXAXyUwzEJfnuHqZJsY4CbxIApS?usp=drive_link" target="_blank" class="btn-primary credential-btn">
+                            <i class="fas fa-external-link-alt"></i> View Certifications
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CV/Resume Card -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <div class="credential-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Resume / CV</h3>
+                    </div>
+                    <div class="credential-content">
+                        <p>Download my comprehensive CV to learn more about my professional experience, educational background, and technical skills in detail.</p>
+                        <div class="credential-features">
+                            <div class="feature-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Professional experience</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Technical skills overview</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Project portfolio summary</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="credential-action">
+                        <button class="btn-disabled credential-btn" disabled>
+                            <i class="fas fa-clock"></i> CV Coming Soon
+                        </button>
+                        <p class="coming-soon-text">Currently preparing a comprehensive CV document</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="boxed-text">Work Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="experience-details">
+                            <h3>Smart Methods Internship</h3>
+                            <div class="company-info">
+                                <span class="company-name">Smart Methods</span>
+                                <span class="duration">6 Months</span>
+                            </div>
+                            <div class="experience-type">Internship</div>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <p>Gained valuable hands-on experience in cutting-edge technology solutions during a comprehensive 6-month internship program. Worked on real-world projects involving AI, robotics, and smart systems development.</p>
+                        <div class="experience-skills">
+                            <span class="skill-tag">AI Development</span>
+                            <span class="skill-tag">Smart Systems</span>
+                            <span class="skill-tag">Robotics</span>
+                            <span class="skill-tag">Technology Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="boxed-text">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span class="boxed-text">HTML</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span class="boxed-text">CSS</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js-square"></i>
+                    <span class="boxed-text">JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <span class="boxed-text">React</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span class="boxed-text">Python</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js"></i>
+                    <span class="boxed-text">Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-robot"></i>
+                    <span class="boxed-text">AI/ML</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-eye"></i>
+                    <span class="boxed-text">Computer Vision</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span class="boxed-text">Flutter</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span class="boxed-text">SQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <span class="boxed-text">Java</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-php"></i>
+                    <span class="boxed-text">PHP</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <span class="boxed-text">C++</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social" class="section">
+        <div class="container">
+            <h2 class="boxed-text">Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/khaledsulimani" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/khaledsulaimaniksx/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:khaled.sul2004@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.instagram.com/dixtrr?igsh=NDY4NTlwd3lhd2N6&utm_source=qr" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="boxed-text">What People Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Khaled's work on the face recognition project was outstanding. His attention to detail and technical expertise really impressed our team."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Sarah Johnson</strong>
+                            <span>Tech Lead at InnovateCorp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Professional, creative, and delivers excellent results. Khaled's AI projects are innovative and well-executed."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Ahmed Ali</strong>
+                            <span>Project Manager</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Great collaboration skills and deep understanding of computer vision technologies. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <strong>Dr. Maria Rodriguez</strong>
+                            <span>Research Director</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="boxed-text">Let's Work Together</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Let's discuss how we can work together!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>khaled.sul2004@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+966 053 663 3315 </span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <span>makahh, Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name">Full Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required rows="5"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
+                    
+                    <div id="form-status" class="form-status"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KSX Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- إضافة كود JavaScript -->
+    <script src="script-final.js"></script>
+</body>
+</html>

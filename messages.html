@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Viewer - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 99, 71, 0.1);
+            border-radius: 15px;
+            border: 1px solid #ff6347;
+        }
+        .message-card {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+        .message-header {
+            color: #ff6347;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .message-meta {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .message-content {
+            line-height: 1.6;
+        }
+        .no-messages {
+            text-align: center;
+            color: #ccc;
+            font-style: italic;
+            padding: 40px;
+        }
+        .refresh-btn {
+            background: linear-gradient(45deg, #ff6347, #ff4500);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 10px;
+        }
+        .instructions {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📧 Portfolio Messages</h1>
+            <p>All messages sent through your portfolio contact form</p>
+            <button class="refresh-btn" onclick="loadMessages()">🔄 Refresh Messages</button>
+            <button class="refresh-btn" onclick="clearMessages()">🗑️ Clear All</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📍 How to View Messages:</h3>
+            <ol>
+                <li><strong>Admin Panel:</strong> Add <code>#admin</code> to your main portfolio URL</li>
+                <li><strong>Console:</strong> Press F12, type <code>checkMessages()</code></li>
+                <li><strong>This Page:</strong> Bookmark this page to view messages anytime</li>
+                <li><strong>Export:</strong> Use <code>exportMessages()</code> to download</li>
+            </ol>
+        </div>
+
+        <div id="messages-container">
+            <!-- Messages will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        function loadMessages() {
+            const messages = JSON.parse(localStorage.getItem('portfolioMessages') || '[]');
+            const container = document.getElementById('messages-container');
+            
+            if (messages.length === 0) {
+                container.innerHTML = `
+                    <div class="no-messages">
+                        <h3>📭 No messages yet</h3>
+                        <p>Messages sent through your portfolio contact form will appear here.</p>
+                        <p><strong>To test:</strong> Go to your portfolio, fill out the contact form, and come back here!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <h2>📬 Total Messages: ${messages.length}</h2>
+                ${messages.reverse().map((msg, index) => `
+                    <div class="message-card">
+                        <div class="message-header">
+                            Message #${messages.length - index} - ${msg.name} (${msg.email})
+                        </div>
+                        <div class="message-meta">
+                            📅 ${new Date(msg.timestamp).toLocaleString()}
+                            | 📧 Subject: ${msg.subject}
+                        </div>
+                        <div class="message-content">
+                            <strong>Message:</strong><br>
+                            ${msg.message}
+                        </div>
+                    </div>
+                `).join('')}
+            `;
+        }
+
+        function clearMessages() {
+            if (confirm('Are you sure you want to clear all messages?')) {
+                localStorage.removeItem('portfolioMessages');
+                loadMessages();
+                alert('All messages cleared!');
+            }
+        }
+
+        // Load messages when page loads
+        loadMessages();
+
+        // Auto-refresh every 30 seconds
+        setInterval(loadMessages, 30000);
+
+        // Add some sample data if none exists (for demonstration)
+        window.addSampleMessage = function() {
+            const messages = JSON.parse(localStorage.getItem('portfolioMessages') || '[]');
+            const sampleMessage = {
+                name: 'John Doe',
+                email: 'john@example.com',
+                subject: 'Hello from your portfolio!',
+                message: 'This is a sample message to show how the message system works. Your portfolio looks amazing!',
+                timestamp: new Date().toISOString(),
+                id: Date.now()
+            };
+            messages.push(sampleMessage);
+            localStorage.setItem('portfolioMessages', JSON.stringify(messages));
+            loadMessages();
+            alert('Sample message added!');
+        };
+    </script>
+</body>
+</html>
