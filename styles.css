@@ -1075,31 +1075,19 @@ form button:hover {
     }
 }
 
-/* الخلفية المتحركة */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('new photo.gif') no-repeat center center;
-    background-size: cover;
-    background-position: center center;
-    z-index: -1;
-    overflow: hidden;
-}
-
-/* Desktop background optimization */
+/* Desktop Background - Optimized for PC */
 @media (min-width: 769px) {
     .background {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 100%;
-        min-height: 100vh;
-        background-attachment: scroll;
+        height: 100vh;
+        background: url('new photo.gif') no-repeat center center;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center top;
+        background-attachment: fixed;
+        background-position: center center;
+        z-index: -1;
     }
     
     body {
@@ -1107,17 +1095,36 @@ form button:hover {
     }
 }
 
-/* Mobile background fix */
+/* Mobile Background - Optimized for Phone */
 @media (max-width: 768px) {
     .background {
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
         height: 100vh;
-        background-attachment: scroll;
+        background: url('new photo.gif') no-repeat center center;
         background-size: cover;
+        background-attachment: scroll;
+        background-position: center center;
+        z-index: -1;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
     }
+}
+
+/* Default background (fallback) */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('new photo.gif') no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
 }
 
 /* Container Styles */
