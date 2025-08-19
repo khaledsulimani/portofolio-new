@@ -657,6 +657,9 @@ form button:hover {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card.featured {
@@ -725,7 +728,7 @@ form button:hover {
 .project-links {
     display: flex;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: auto;
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(0, 0, 0, 0.3);
@@ -750,7 +753,7 @@ form button:hover {
 
 .btn-primary {
     background: #ff4500;
-    color: #ffffff;
+    color: #fff !important;
     border: 3px solid #ffffff;
     font-weight: 900;
     text-transform: uppercase;
@@ -763,7 +766,7 @@ form button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 99, 71, 0.4);
     background: #ff6347;
-    color: #ffffff;
+    color: #fff !important;
     border-color: #ffffff;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
 }
@@ -826,19 +829,22 @@ form button:hover {
     margin-top: 40px;
 }
 
+
 .testimonial-card {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    backdrop-filter: blur(15px);
+    padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
     transition: all 0.3s ease;
     position: relative;
+    box-shadow: 0 20px 40px rgba(255, 99, 71, 0.08);
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    border-color: #ff6347;
+    border-color: rgba(255, 99, 71, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 99, 71, 0.2);
 }
 
 .quote-icon {
@@ -963,8 +969,15 @@ form button:hover {
     outline: none;
     border-color: #ff6347;
     background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        transition: all 0.3s ease;
+        position: relative;
+        box-shadow: 0 20px 40px rgba(255, 99, 71, 0.08);
 }
-
 .form-group label {
     position: absolute;
     top: -10px;
@@ -991,8 +1004,10 @@ form button:hover {
 }
 
 .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 99, 71, 0.4);
+    transform: translateY(-5px);
+    background: rgba(255, 99, 71, 0.1);
+    border-color: rgba(255, 99, 71, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 99, 71, 0.2);
 }
 
 .form-status {
@@ -1303,5 +1318,5 @@ footer {
 .boxed-text p {
     font-size: 1rem; /* الحفاظ على حجم الخط الطبيعي */
     text-align: left; /* تعديل المحاذاة للنصوص داخل الفقرة */
-    display: inline-block;
+    display: inline-block;
 }
