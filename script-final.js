@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(45deg, #ff6347, #ff4500);
+        background: linear-gradient(45deg, #00ff41, #00cc33);
         color: white;
         border: none;
         font-size: 20px;
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 0;
         transition: opacity 0.3s ease;
         z-index: 1000;
-        box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
     `;
     
     document.body.appendChild(scrollToTopBtn);
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
             position: absolute;
             width: 2px;
             height: 2px;
-            background-color: rgba(255, 99, 71, 0.3);
+            background-color: rgba(0, 255, 65, 0.3);
             border-radius: 50%;
             animation: float ${Math.random() * 20 + 10}s linear infinite;
             left: ${Math.random() * 100}%;
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
             width: 400px;
             max-height: 500px;
             background: rgba(0, 0, 0, 0.9);
-            border: 1px solid #ff6347;
+            border: 1px solid #00ff41;
             border-radius: 15px;
             padding: 20px;
             z-index: 10000;
@@ -360,18 +360,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const messages = JSON.parse(localStorage.getItem('portfolioMessages') || '[]');
         
         adminPanel.innerHTML = `
-            <h3 style="color: #ff6347; margin-bottom: 15px;">Messages (${messages.length})</h3>
-            <button onclick="this.parentElement.remove()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #ff6347; font-size: 20px; cursor: pointer;">×</button>
+            <h3 style="color: #00ff41; margin-bottom: 15px;">Messages (${messages.length})</h3>
+            <button onclick="this.parentElement.remove()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #00ff41; font-size: 20px; cursor: pointer;">×</button>
             ${messages.map(msg => `
-                <div style="background: rgba(255, 99, 71, 0.1); padding: 15px; margin: 10px 0; border-radius: 10px; border-left: 3px solid #ff6347;">
-                    <strong style="color: #ff6347;">${msg.name}</strong> (${msg.email})<br>
+                <div style="background: rgba(0, 255, 65, 0.1); padding: 15px; margin: 10px 0; border-radius: 10px; border-left: 3px solid #00ff41;">
+                    <strong style="color: #00ff41;">${msg.name}</strong> (${msg.email})<br>
                     <small style="color: #ccc;">${new Date(msg.timestamp).toLocaleDateString()}</small><br>
                     <strong style="color: #fff;">Subject:</strong> ${msg.subject}<br>
                     <strong style="color: #fff;">Message:</strong> ${msg.message}
                 </div>
             `).join('') || '<p style="color: #ccc;">No messages yet.</p>'}
             <button onclick="localStorage.removeItem('portfolioMessages'); location.reload();" 
-                    style="background: #ff6347; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+                    style="background: #00ff41; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
                 Clear All Messages
             </button>
         `;

@@ -326,12 +326,77 @@
                                 <span>Project portfolio summary</span>
                             </div>
                         </div>
+                        <div class="secure-access-hint">
+                            <i class="fas fa-lock"></i>
+                            <span>Access requires password. Request if needed.</span>
+                        </div>
                     </div>
                     <div class="credential-action">
-                        <button class="btn-disabled credential-btn" disabled>
-                            <i class="fas fa-clock"></i> CV Coming Soon
-                        </button>
-                        <p class="coming-soon-text">Currently preparing a comprehensive CV document</p>
+                        <a href="#" onclick="handleSecureAccess(event, 'resume', 'Resume / CV')" class="btn-primary credential-btn secure-link">
+                            <i class="fas fa-shield-alt"></i> Secure Access to CV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recommendations Card -->
+                <div class="credential-card">
+                    <div class="credential-header">
+                        <div class="credential-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Recommendations</h3>
+                    </div>
+                    <div class="credential-content">
+                        <p>Professional recommendation letters from supervisors, colleagues, and industry professionals who can attest to my work quality and technical expertise.</p>
+                        <div class="credential-features">
+                            <div class="feature-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Professional endorsements</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-star-of-life"></i>
+                                <span>Work quality validation</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-comments"></i>
+                                <span>Character references</span>
+                            </div>
+                        </div>
+                        <div class="secure-access-hint">
+                            <i class="fas fa-lock"></i>
+                            <span>Access requires password. Request if needed.</span>
+                        </div>
+                    </div>
+                    <div class="credential-action">
+                        <div class="recommendations-list">
+                            <a href="#" onclick="handleSecureAccess(event, 'recommendation1', 'CTO Eng.Asma Duramae Recommendation')" class="recommendation-link secure-link">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>CTO Eng.Asma Duramae Recommendation</span>
+                                <i class="fas fa-shield-alt"></i>
+                            </a>
+                            <a href="#" onclick="handleSecureAccess(event, 'recommendation2', 'CEO Eng.wesam Munshi Recommendation')" class="recommendation-link secure-link">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>CEO Eng.wesam Munshi Recommendation</span>
+                                <i class="fas fa-shield-alt"></i>
+                            </a>
+                            <a href="#" onclick="handleSecureAccess(event, 'recommendation3', 'Sales Manager Eng.Qusai Masri - 3Dit Corp')" class="recommendation-link secure-link">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Sales Manager Eng.Qusai Masri - 3Dit Corp</span>
+                                <i class="fas fa-shield-alt"></i>
+                            </a>
+                            <div class="recommendation-link disabled-recommendation">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Academic Supervisor Letter</span>
+                                <i class="fas fa-clock"></i>
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                            <div class="recommendation-link disabled-recommendation">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Industry Partner Reference</span>
+                                <i class="fas fa-clock"></i>
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -583,5 +648,7 @@
 
     <!-- إضافة كود JavaScript -->
     <script src="script-final.js"></script>
+    <script src="js/secure-access.js"></script>
+    <script src="js/simple-secure-access.js"></script>
 </body>
 </html>
