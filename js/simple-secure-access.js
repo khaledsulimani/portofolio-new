@@ -7,7 +7,7 @@
 // Resource URLs with password protection
 const SECURE_RESOURCES = {
     'recommendation1': 'https://drive.google.com/file/d/1bd8Ad22Pj899v1aKYmpKLIG8GkLtXsSV/view',
-    'recommendation2': 'https://drive.google.com/file/d/recommendation2-file-id/view',
+    'recommendation2': 'https://drive.google.com/file/d/1RpDs67VqMu7Tdh5A1Wt_1NBzAlZB5Nuj/view',
     'recommendation3': 'https://drive.google.com/file/d/recommendation3-file-id/view',
     'resume': 'https://drive.google.com/file/d/1yqBoLS0nIcRLw1qQidM_KgYuUZX3KpEg/view'
 };
