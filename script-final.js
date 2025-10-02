@@ -278,6 +278,61 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add particles effect (optional enhancement)
     createParticles();
 
+    // Cyber Rain Effect on Mouse Move
+    createCyberRain();
+
+    // Function to create cyber rain effect following mouse
+    function createCyberRain() {
+        const characters = '01';
+        let lastTime = 0;
+        const throttleDelay = 150; // Only create drops every 150ms (reduced rate)
+        
+        document.addEventListener('mousemove', function(e) {
+            const currentTime = Date.now();
+            
+            // Throttle the creation of drops
+            if (currentTime - lastTime < throttleDelay) {
+                return;
+            }
+            lastTime = currentTime;
+            
+            // Create only 1 drop (reduced from 2)
+            createRainDrop(
+                e.clientX + (Math.random() - 0.5) * 15, 
+                e.clientY + (Math.random() - 0.5) * 15
+            );
+        });
+
+        function createRainDrop(x, y) {
+            const drop = document.createElement('div');
+            const char = characters[Math.floor(Math.random() * characters.length)];
+            const duration = Math.random() * 1.5 + 2.5; // 2.5-4 seconds (little faster)
+            
+            drop.textContent = char;
+            drop.style.cssText = `
+                position: fixed;
+                left: ${x}px;
+                top: ${y}px;
+                color: #00ff41;
+                font-size: ${Math.random() * 6 + 10}px;
+                font-family: 'Courier New', monospace;
+                font-weight: bold;
+                pointer-events: none;
+                z-index: 9999;
+                text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+                opacity: 1;
+                animation: rainFall ${duration}s ease-out forwards;
+            `;
+            
+            document.body.appendChild(drop);
+            
+            // Remove element after animation
+            setTimeout(() => {
+                drop.remove();
+            }, duration * 1000 + 100);
+        }
+    }
+
     // Function to create floating particles
     function createParticles() {
         const particlesContainer = document.createElement('div');

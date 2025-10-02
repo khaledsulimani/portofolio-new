@@ -5,6 +5,34 @@
     box-sizing: border-box;
 }
 
+/* Custom Scrollbar Styles - Green Theme */
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00ff41, #00cc33);
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00cc33, #00ff41);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #00ff41 rgba(0, 0, 0, 0.5);
+}
+
 /* General Styles */
 body {
     font-family: 'Inter', Arial, sans-serif;
@@ -1636,12 +1664,13 @@ footer {
 
 .social-links a i {
     font-size: 2.8rem;
-    color: #fff;
+    color: #00ff41;
     transition: transform 0.3s ease;
 }
 
 .social-links a:hover i {
     transform: scale(1.2);
+    color: #00ff41;
 }
 
 .social-links a span {
@@ -1740,4 +1769,33 @@ nav a span {
 .download-cv span, .portfolio-link span, .special-link span {
     position: relative;
     z-index: 2;
+}
+
+/* Cyber Rain Animation */
+@keyframes rainFall {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.9;
+    }
+    15% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0.5;
+        transform: translateY(60vh) translateX(-8px) scale(0.7);
+    }
+    100% {
+        transform: translateY(120vh) translateX(-15px) scale(0.3);
+        opacity: 0;
+    }
+}
+
+/* Additional cyber rain glow effect */
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 5px #00ff41, 0 0 10px #00ff41, 0 0 15px #00ff41;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41, 0 0 30px #00ff41;
+    }
 }
